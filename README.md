@@ -23,7 +23,11 @@ COPY ./dbproject.war /usr/local/tomcat/webapps/
 
 EXPOSE 8080
 
+VOLUME dbdata:/var/lib/postgresql/data/
 
+
+
+## Dockerfile Postgre : Base de données
 vi Dockerfile
 FROM postgres:9.5
 
