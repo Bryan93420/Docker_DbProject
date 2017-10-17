@@ -45,7 +45,7 @@ docker build -t tomcat_1:1.1 .
 docker run -it --name db postgres:9.5.4
 docker run -it --name tomcatdb -P --link db:db tomcat_1:1.1
 
-##Mapper les ports
+## Mapper les ports
 72d5617e3485        tomcat_3:1.0        "catalina.sh run"        34 minutes ago      Up 34 minutes       0.0.0.0:32775->8080/tcp   tomcat_3
 ddd3b2afa607        postgre_2:1.0       "docker-entrypoint..."   36 minutes ago      Up 36 minutes       5432/tcp                  db
 
