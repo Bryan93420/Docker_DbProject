@@ -14,7 +14,11 @@ Installer les images postgre et tomcat
 
 
 ## Créer les Dockerfile permettant l’installation des applications et la copie des fichiers
+
+### Taper la commande
 vi Dockerfile
+
+### Entrer les commandes dans le fichier dockerfile
 FROM tomcat:8-jre8
 
 RUN apt-get update && apt-get install -y postgresql
@@ -29,6 +33,8 @@ VOLUME dbdata:/var/lib/postgresql/data/
 
 ## Dockerfile Postgre : Base de données
 vi Dockerfile
+
+### Entrer les commandes dans le dockerfile
 FROM postgres:9.5
 
 RUN apt-get update
