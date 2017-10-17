@@ -5,3 +5,6 @@ RUN  apt-get update && apt-get install -y postgresql
 COPY ./dbproject.war /usr/local/tomcat/webapps/
 
 EXPOSE 8080
+
+VOLUME dbdata:/var/lib/postgresql/data/
+
