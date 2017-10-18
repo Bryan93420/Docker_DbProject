@@ -1,0 +1,19 @@
+version: '2'
+services:
+   mydbapp:
+      build: ./Tomcat
+      ports:
+        - "8888:8080"
+      depends_on:
+        - db
+
+   db:
+      build: ./Postgre
+      ports:
+        - "5432:5432"
+      volumes:
+        - dbdata:/var/lib/postgresql/data
+      container_name: db
+volumes:
+   dbdata:
+
